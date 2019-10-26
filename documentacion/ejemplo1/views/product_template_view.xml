@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="inh_product_template_ej1_form_view">
+            <field name="name">product.template.ej1.form.inherited</field>
+            <field name="model">product.template</field>
+            <field name="inherit_id" ref="product.product_template_only_form_view"/>
+            <field name="arch" type="xml">
+                <field name="categ_id" position="after" >
+                    <field name="family"/>
+               </field>
+
+                <field name="list_price" position="attributes">
+                    <attribute name="attrs">{'required':[('family','=','demo')]}</attribute>
+                </field>
+
+                <field name="description" position="replace"/>
+            </field>
+        </record>
+
+
+     <record id="inh_product_template_ej_tree" model="ir.ui.view">
+        <field name="name">inh.product.template.ej</field>
+        <field name="model">product.template</field>
+        <field name="inherit_id" ref="product.product_template_tree_view"/>
+        <field name="arch" type="xml">
+            <field name="name" position="after">
+                <field name="family"/>
+            </field>
+        </field>
+    </record>
+
+   </data>
+</odoo>

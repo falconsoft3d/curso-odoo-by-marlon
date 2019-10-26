@@ -29,9 +29,9 @@
     'license': 'AGPL-3',
     'category': 'Extra Tools',
     'summary': 'Ejemplo 1.',
-    'depends': ['base'],
+    'depends': ['base','stock'],
     'data': [
-        'views/view.xml',
+        'views/product_template_view.xml',
     ],
     'images': ['static/description/banner.jpg'],
 }
